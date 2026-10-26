@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 12 Cooper Schedule</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 20px;
+            font-family: Arial, sans-serif;
+            background: #eef5ef;
+            color: #23412e;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .header {
+            background: #176b3a;
+            color: white;
+            padding: 28px 20px;
+            text-align: center;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 12px #174b2d20;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        .header p {
+            margin: 0;
+            color: #d7efdd;
+        }
+
+        .schedule-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px #174b2d15;
+        }
+
+        table {
+            width: 100%;
+            min-width: 900px;
+            border-collapse: separate;
+            border-spacing: 6px;
+            padding: 8px;
+        }
+
+        th {
+            background: #d7eadc;
+            color: #176b3a;
+            padding: 16px 10px;
+            border-radius: 7px;
+            font-size: 14px;
+        }
+
+        td {
+            background: #f7faf7;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 7px;
+            border: 1px solid #e0ebe2;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .time {
+            background: #edf5ef;
+            color: #176b3a;
+            font-weight: bold;
+            min-width: 130px;
+        }
+
+        .subject {
+            background: #e5f4e9;
+            border-left: 4px solid #258348;
+        }
+
+        .subject strong {
+            display: block;
+            color: #174b2d;
+            font-size: 13px;
+        }
+
+        .teacher {
+            display: block;
+            margin-top: 5px;
+            color: #39734d;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .special {
+            background: #176b3a;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .break {
+            background: #fff1cf;
+            color: #805c13;
+            font-weight: bold;
+        }
+
+        .empty {
+            background: #fafcfb;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #52705b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px 8px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <h1>Grade 12 Cooper Schedule</h1>
+        <p>Weekly Class Timetable</p>
+    </header>
+
+    <div class="schedule-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>TIME</th>
+                    <th>MONDAY</th>
+                    <th>TUESDAY</th>
+                    <th>WEDNESDAY</th>
+                    <th>THURSDAY</th>
+                    <th>FRIDAY</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="time">12:30 PM<br>(10 mins)</td>
+                    <td class="special" colspan="5">ARRIVAL</td>
+                </tr>
+
+                <tr>
+                    <td class="time">12:30–1:20 PM</td>
+                    <td class="subject" colspan="5" rowspan="2">
+                        <strong>Computer Programming Java</strong>
+                        <span class="teacher">DE VERA</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="time">1:20–2:10 PM</td>
+                </tr>
+
+                <tr>
+                    <td class="time">2:10–3:00 PM</td>
+                    <td class="subject" colspan="2">
+                        <strong>Pagsulat sa Filipino sa Piling Larang</strong>
+                        <span class="teacher">ODONO</span>
+                    </td>
+                    <td class="subject" colspan="3">
+                        <strong>Entrepreneurship</strong>
+                        <span class="teacher">PAEZ</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="time">3:00–3:15 PM<br>(15 mins)</td>
+                    <td class="break" colspan="5">BREAK</td>
+                </tr>
+
+                <tr>
+                    <td class="time">3:15–4:05 PM</td>
+                    <td class="subject">
+                        <strong>Homeroom Guidance</strong>
+                        <span class="teacher">MANTALA</span>
+                    </td>
+                    <td class="subject" rowspan="2">
+                        <strong>English for Academic and Professional Purposes</strong>
+                        <span class="teacher">MANTALA</span>
+                    </td>
+                    <td class="subject">
+                        <strong>Pagsulat sa Filipino sa Piling Larang</strong>
+                        <span class="teacher">ODONO</span>
+                    </td>
+                    <td class="subject" rowspan="2">
+                        <strong>Physical Education and Health 4</strong>
+                        <span class="teacher">DEMECILLO</span>
+                    </td>
+                    <td class="subject">
+                        <strong>Entrepreneurship</strong>
+                        <span class="teacher">PAEZ</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="time">4:05–4:55 PM</td>
+                    <td class="subject" rowspan="2">
+                        <strong>English for Academic and Professional Purposes</strong>
+                        <span class="teacher">MANTALA</span>
+                    </td>
+                    <td class="subject">
+                        <strong>Entrepreneurship</strong>
+                        <span class="teacher">PAEZ</span>
+                    </td>
+                    <td class="subject">
+                        <strong>Pagsulat sa Filipino sa Piling Larang</strong>
+                        <span class="teacher">ODONO</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="time">4:55–5:45 PM</td>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                    <td class="empty"></td>
+                </tr>
+
+                <tr>
+                    <td class="time">5:45 PM</td>
+                    <td class="special" colspan="5">DEPARTURE</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        Grade 12 Cooper · Weekly Class Timetable
+    </footer>
+
+</div>
+
+</body>
+</html>
