@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Calculator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            background: #edf6ef;
+            font-family: Arial, sans-serif;
+            color: #174b2d;
+        }
+
+        h1 {
+            text-align: center;
+            color: #176b3a;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        .calculator {
+            max-width: 470px;
+            margin: auto;
+            background: white;
+            border: 2px solid #287545;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(20, 80, 40, 0.12);
+        }
+
+        .calculator h2 {
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background: #176b3a;
+            color: white;
+            font-size: 22px;
+        }
+
+        .form-content {
+            padding: 22px;
+        }
+
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #82b694;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #b8dfc3;
+            border-color: #176b3a;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            padding: 18px;
+            background: #f2f8f3;
+            border-top: 1px solid #d4e7d8;
+        }
+
+        button {
+            min-width: 110px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .compute {
+            background: #218448;
+            color: white;
+        }
+
+        .compute:hover {
+            background: #176b3a;
+        }
+
+        .reset {
+            background: #dcebe0;
+            color: #174b2d;
+        }
+
+        .reset:hover {
+            background: #c6dfcd;
+        }
+
+        #result {
+            padding: 0 20px 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .home {
+            display: block;
+            width: fit-content;
+            margin: 24px auto 0;
+            color: #176b3a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sample Calculator</h1>
+
+    <main class="calculator">
+        <h2>Addition Calculator</h2>
+
+        <form id="calculatorForm">
+            <div class="form-content">
+                <div class="form-row">
+                    <label for="firstNumber">First Number:</label>
+                    <input
+                        type="number"
+                        id="firstNumber"
+                        step="any"
+                        placeholder="Enter first number"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <label for="secondNumber">Second Number:</label>
+                    <input
+                        type="number"
+                        id="secondNumber"
+                        step="any"
+                        placeholder="Enter second number"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="compute">Compute</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+
+        <p id="result" aria-live="polite"></p>
+    </main>
+
+    <a class="home" href="index.html">← Back to Home</a>
+
+    <script>
+        const form = document.getElementById("calculatorForm");
+        const result = document.getElementById("result");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const first = Number(
+                document.getElementById("firstNumber").value
+            );
+
+            const second = Number(
+                document.getElementById("secondNumber").value
+            );
+
+            result.textContent = "Result: " + (first + second);
+        });
+
+        form.addEventListener("reset", function() {
+            result.textContent = "";
+        });
+    </script>
+
+</body>
+</html>
