@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wentworth Dale Cambel | My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f1;
+            color: #20352a;
+        }
+
+        header {
+            background: #123d2a;
+            color: white;
+            padding: 28px 8%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #c4dfcd;
+        }
+
+        nav {
+            background: #20583d;
+            padding: 14px 8%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #b9efc9;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro {
+            background: white;
+            border-left: 6px solid #258653;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 18px #183d2a12;
+        }
+
+        .intro h2 {
+            margin-bottom: 12px;
+            color: #17643b;
+        }
+
+        .intro p {
+            line-height: 1.7;
+            color: #526358;
+        }
+
+        .section-title {
+            margin-bottom: 18px;
+            font-size: 22px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #dce8df;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px #183d2a18;
+        }
+
+        .project-card .number {
+            color: #258653;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #68766d;
+            margin-bottom: 18px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            background: #17643b;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .project-card a:hover {
+            background: #258653;
+        }
+
+        footer {
+            text-align: center;
+            background: #123d2a;
+            color: #d5e7db;
+            padding: 22px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 24px;
+            }
+
+            nav {
+                padding: 16px 24px;
+                gap: 16px;
+            }
+
+            .container {
+                margin-top: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="home">
+        <h1>Wentworth Dale Cambel</h1>
+        <p>Grade 12 | COOPER | ICT Student</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">My Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <section class="intro" id="about">
+            <h2>Hello, welcome to my website!</h2>
+            <p>
+                My name is Wentworth Dale Cambel, and I am a
+                Grade 12 student from section COOPER. This website
+                contains links to my HTML activities and programming projects.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">My Activities &amp; Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <div class="number">PROJECT 01</div>
+                    <h3>Element Form</h3>
+                    <p>An HTML form activity for practicing input elements.</p>
+                    <a href="formElements.html">Open Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="number">PROJECT 02</div>
+                    <h3>Portal Login</h3>
+                    <p>A login page project using web development concepts.</p>
+                    <a href="portalLogin.html">Open Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="number">PROJECT 03</div>
+                    <h3>JavaScript Logs</h3>
+                    <p>An activity for practicing JavaScript commands.</p>
+                    <a href="javascriptLogs.html">Open Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="number">PROJECT 04</div>
+                    <h3>Discount Calculator</h3>
+                    <p>A calculator activity for computing discounted prices.</p>
+                    <a href="discountCalculator.html">Open Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="number">PROJECT 05</div>
+                    <h3>DotNetFramework</h3>
+                    <p>A page about the .NET Framework.</p>
+                    <a href="dotNetFramework.html">Open Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="number">PROJECT 06</div>
+                    <h3>Student Array with Images</h3>
+                    <p>A programming activity involving student data and images.</p>
+                    <a href="studentArray.html">Open Project</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="number">PROJECT 07</div>
+                    <h3>Grid Testing</h3>
+                    <p>An activity for practicing CSS Grid layouts.</p>
+                    <a href="gridTesting.html">Open Project</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="intro" id="contact" style="margin-top: 30px;">
+            <h2>Contact</h2>
+            <p>Welcome to my student portfolio. Thank you for visiting!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Wentworth Dale Cambel | Student Portfolio
+    </footer>
+
+</body>
+</html>
